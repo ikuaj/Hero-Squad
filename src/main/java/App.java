@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.HashMap;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -9,11 +10,13 @@ public class App {
     staticFileLocation("/public");
 
     get("/", (request, response) -> {
-      return new ModelAndView(new HashMap(), "templates/Hero.vtl");
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/Hero.vtl" );
+      return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
 
     get("/", (request, response) -> {
-      return new ModelAndView(new HashMap(), "templates/Squad.vtl");
+      return new ModelAndView(new HashMap(), "templates/Hero.vtl");
     }, new VelocityTemplateEngine());
 
   }

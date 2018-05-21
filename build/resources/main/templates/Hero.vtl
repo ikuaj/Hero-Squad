@@ -1,27 +1,40 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello Friend!</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-  </head>
-  <body>
+<div class="container">
 <h1>Fill in your Hero's details here!</h1>
 <form action='/Hero'>
   <div class="form-group">
     <label for="sender">Hero name</label>
     <input id="sender" name="sender" class="form-control" type="text">
   </div>
+  <div>
     <label for="sender">Hero's Age</label>
     <input id="sender" name="sender" class="form-control" type="text">
   </div>
+  <div>
     <label for="sender">Hero's Strenghts</label>
     <input id="sender" name="sender" class="form-control" type="text">
   </div>
+  <div>
     <label for="sender">Hero's Weakness</label>
+    <input id="sender" name="sender" class="form-control" type="text">
+  </div>
+  <button type="add" class="btn btn-outline-[success]">Add!</button>
+</form>
+
+<h1>Fill in your Squad's details here!</h1>
+<form action='/Squad'>
+  <div class="form-group">
+    <label for="sender">Squad name</label>
+    <input id="sender" name="sender" class="form-control" type="text">
+  </div>
+  <div>
+    <label for="sender">Squad's size</label>
+    <input id="sender" name="sender" class="form-control" type="number">
+  </div>
+  <div>
+    <label for="sender">Squad's Dedications</label>
     <input id="sender" name="sender" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Create!</button>
 </form>
-    </div>
-  </body>
-</html>
+</div>
+
